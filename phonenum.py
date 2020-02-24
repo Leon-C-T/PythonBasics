@@ -1,7 +1,6 @@
 #!/usr/bin/env python3.8
 
 def create_phone_number(n):
-    phone_num = n[9]
     phone_beg ="".join(map(str,n[0:3]))
     phone_mid ="".join(map(str,n[3:6]))
     phone_end ="".join(map(str,n[6:]))
