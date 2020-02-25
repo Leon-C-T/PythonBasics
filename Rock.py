@@ -60,7 +60,8 @@ while (ex != 'n'):
         comp_selection = 3 #set computer choice to scissors
     elif scissors_avg >= (rock_avg or paper_avg): #if the user picks scissors more times than anything else
         comp_selection = 1 #set computer choice to rock
-
+    elif counter == 15:
+        comp_selection = random.randint(1,3)
 
 
     ex = input("Would you like to continue (y/n)?")          
