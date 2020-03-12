@@ -1,9 +1,15 @@
 #!/usr/bin/env python3.8
 
-def fizzbuzz(number):
-    if number % 3 == 0:
-        print("Fizz")
-    if number % 5 == 0:
-        print("Buzz")
+def three(arg1):
+ x = ""
+ y = ""
+ z = " "
+ if arg1 % 3 == 0:
+    x = "Fizz"
+ if arg1 % 5 == 0:
+    y = "Buzz"
+ else:
+     z = "null"
+ return x+y+z
 
-fizzbuzz(20)
+print(three(30))

@@ -56,7 +56,7 @@ class attributes:               # A Class to hold and return values of a players
     
     def cards_value(self):       #test - VALUE OF CARDS TO MAP FUNCTION WORKS
         length = len(self.cards)
-        self.value = 0           #Resets total card value to 0 to calculate new total value
+        self.value = 0
         for i in range(length):
             self.value = self.value + card_map(self.cards[i]) #test
         #self.value = self.value + card_map('9D') #test
@@ -135,18 +135,18 @@ print("Computers' Current Cards are: ", computer.current_cards(), "With a Value 
 
 while (computer.total_value() <= 16):       ##Continues running this code until the total value of the computer(Dealers) hand is 17 or more
         
-    if computer.total_value() < 17: 
-        input("Press Enter to see the computer deal a card \n")
-        print("The computer has drawn another card")
-        computer.add_card() 
-        computer.cards_value()   
-        print("Computers' Current Cards are: ", computer.current_cards(), "With a Value of", computer.total_value(),'\n') ## Displays computers current cards with value 
-    if  computer.total_value() >= 17:       ## If the total card value of the computer is < 17
-        ## print("Computers' Current Cards are: ", computer.current_cards(), "With a Value of", computer.total_value(),'\n') 
-        hit = False     ## Sets Hit Flag to false to break out
-        if computer.total_value() > 21 and player1.total_value() <= 21:   ## Checks if the Computer total value is above 21 and Player1 total value is below 21
-        #print("The Computer has gone bust, You Win!") ######## END
-            bust = True
+            if computer.total_value() < 17: 
+                input("Press Enter to see the computer deal a card \n")
+                print("The computer has drawn another card")
+                computer.add_card() 
+                computer.cards_value()   
+                print("Computers' Current Cards are: ", computer.current_cards(), "With a Value of", computer.total_value(),'\n') ## Displays computers current cards with value 
+            if  computer.total_value() >= 17       ## If the total card value of the computer is < 17
+                ## print("Computers' Current Cards are: ", computer.current_cards(), "With a Value of", computer.total_value(),'\n') 
+                hit = False     ## Sets Hit Flag to false to break out
+                if computer.total_value() > 21 and player1.total_value() <= 21:   ## Checks if the Computer total value is above 21 and Player1 total value is below 21
+                    #print("The Computer has gone bust, You Win!") ######## END
+                    bust = True
         
 #############################################            3. End Conditions          #############################################  
 
